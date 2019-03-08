@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</android.support.constraint.ConstraintLayout>-->
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardviewFuture"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp">
+    <!--      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+              <TextView
+                  android:id="@+id/tvbooking_Future"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text=""
+                  android:textColor="@color/loginBTn"
+                  android:visibility="gone" />
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+
+                  android:layout_height="wrap_content">
+                  &lt;!&ndash;     <ImageButton
+                           android:src="@drawable/ic_location24dp"
+                           android:id="@+id/btn_img_toDayBookin"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content" />
+           &ndash;&gt;
+                  <TextView
+                      android:id="@+id/tv_startlocation__Future"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/_5sdp"
+                      android:layout_marginBottom="@dimen/_5sdp"
+                      android:drawableLeft="@drawable/ic_location24dp"
+                      android:textColor="@color/green"
+
+                      android:textSize="@dimen/_13sdp"
+                      android:textStyle="bold" />
+
+                  <TextView
+                      android:id="@+id/desh"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+
+                      android:layout_marginTop="@dimen/_5sdp"
+                      android:layout_marginBottom="@dimen/_13sdp"
+                      android:text="-"
+                      android:textColor="@color/green"
+                      android:textSize="@dimen/_13sdp"
+                      android:textStyle="bold" />
+
+                  <TextView
+                      android:id="@+id/tv_endlocation2_Future"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/_5sdp"
+                      android:layout_marginBottom="@dimen/_5sdp"
+                      android:textColor="@color/green"
+
+                      android:textSize="@dimen/_13sdp"
+                      android:textStyle="bold" />
+              </LinearLayout>
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:id="@+id/tvoneweytrip"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="@dimen/_5sdp"
+
+                          android:drawableLeft="@drawable/ic_flat_one_24dp"
+                          android:textColor="@color/black" />
+
+                      <TextView
+                          android:id="@+id/tvroundtrip"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="@dimen/_5sdp"
+
+                          android:drawableLeft="@drawable/ic_rotate_24dp"
+                          android:textColor="@color/black" />
+
+                      <TextView
+                          android:id="@+id/tvTrip_Future"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="@dimen/_5sdp"
+
+                          android:textColor="@color/black" />
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerHorizontal="true">
+
+                      &lt;!&ndash; <ImageButton
+                           android:src="@drawable/ic_location24dp"
+                           android:id="@+id/btn_img_toDayBookin"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content" />
+       &ndash;&gt;
+
+
+                      <TextView
+                          android:id="@+id/tvDate_Future"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="@dimen/_5sdp"
+                          android:drawableLeft="@drawable/ic_date_24dp"
+                          android:textColor="@color/black" />
+                  </LinearLayout>
+
+
+                  <TextView
+                      android:id="@+id/tvTime_Future"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:layout_marginRight="@dimen/_15sdp"
+                      android:layout_marginBottom="@dimen/_5sdp"
+                      android:drawableLeft="@drawable/ic_access_time24dp"
+                      android:textSize="@dimen/_13sdp" />
+              </RelativeLayout>
+
+          </LinearLayout>-->
+
+    ??=========
+
+    //----------------------------------------
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvbooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/loginBTn"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/desh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="  -  "
+                android:textColor="@color/green"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvDriverIdFuter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="DOC0001"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="TRIP:"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/tvoneweytrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/ic_flat_one_24dp" />
+
+                <ImageView
+                    android:id="@+id/tvroundtrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/ic_rotate_24dp" />
+
+
+                <TextView
+                    android:id="@+id/tvTrip_Future"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_green_24dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_startlocation__Future"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_5sdp" />
+
+
+                <TextView
+
+                    android:id="@+id/tv_endlocation2_Future"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_startlocation__Future"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:text="" />
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_startlocation__Future"
+                    app:srcCompat="@drawable/ic_red_24dp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/desh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_13sdp"
+                android:text="-"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="DuplicateIds" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_date_24dp" />
+
+            <TextView
+                android:id="@+id/tvDate_Future"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_25sdp"
+
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="sdsdssds" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/tvTrip_Date"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/ic_access_time24dp" />
+
+                <TextView
+                    android:id="@+id/tvTime_Future"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTrip_Date"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="asdasda" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvPaymentfuture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:drawableLeft="@drawable/rupee_indian"
+
+                android:textColor="#000"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

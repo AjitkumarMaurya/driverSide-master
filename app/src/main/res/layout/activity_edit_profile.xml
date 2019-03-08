@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="com.driver.driverbooking.Activity.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<!--
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/forgetPass"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="Edit your profile"
+            android:textColor="#ffff"
+            android:textSize="@dimen/_17sdp"
+            android:textStyle="bold" />
+-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_30sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_30sdp"><!--
+    <ImageView
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_profile_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />-->
+                <ImageView
+                    android:id="@+id/imgeroun"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_profile_round" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtNameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Enter Your First Name  "
+ />
+
+          <!--  <View
+
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/line" />-->
+
+
+            <EditText
+                android:id="@+id/edtLastEdit"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+             android:hint="Enter Your Last Name" />
+
+           <!-- <View
+
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/line" />-->
+
+            <EditText
+                android:id="@+id/edtEmailEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Enter Your Email Id"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="149dp" />
+            <EditText
+                android:id="@+id/edtPermanentEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Enter Your Permanent Address"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="149dp" />
+
+           <!-- <View
+
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/line" />
+-->
+            <EditText
+
+                android:id="@+id/edtResidentialEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Enter Your Residential Address "
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="204dp" />
+
+          <!--  <View
+
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/line" />
+-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_50sdp"
+                    android:background="@drawable/round_edittext"
+                    android:backgroundTint="@color/loginBTn"
+                    android:singleLine="true"
+
+                    android:text="Save"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_20sdp"
+
+
+                    />
+             <!--
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="40dp"
+
+                    android:background="@drawable/image_round"
+                    android:src="@drawable/ic_edit_24dp"
+                    tools:ignore="VectorDrawableCompat" />-->
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+<!--
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/forgetPass">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageButton
+                            android:layout_width="50dp"
+                            android:background="@color/forgetPass"
+
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_home_24dp" />
+
+                        <ImageButton
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@color/forgetPass"
+                            android:layout_marginLeft="50dp"
+
+                            android:src="@drawable/ic_star_24dp" />
+
+                        <ImageButton
+                            android:background="@color/forgetPass"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@drawable/car1" />
+
+                        <ImageButton
+                            android:layout_width="48dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="50dp"
+                            android:background="@color/forgetPass"
+                            android:src="@drawable/ic_setting_24dp" />
+                    </LinearLayout>
+                </RelativeLayout>-->
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f75858</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#ed341d</color><!--D81B60-->
+
+    <color name="forgetPass">#ed341d</color>
+
+
+    <color name="loginBTn">#f44d18</color>
+
+    <color name="user">#2d2f8d</color>
+    <color name="black">#000000</color>
+    <color name="line">#E4E4E4</color>
+    <color name="green">#057a26</color>
+<color name="btnGreen">#00a652</color>
+
+</resources>

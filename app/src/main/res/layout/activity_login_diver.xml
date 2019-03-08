@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/driver_login_bg"
+    android:orientation="vertical"
+    tools:context=".Fragment_Driver.LoginDrivarFragment">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:gravity="center">
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/driver_login_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:drawableLeft="@drawable/ic_perm_24dp"
+            android:hint=" Username or Mobile "
+             android:singleLine="true"
+            android:textSize="@dimen/_15sdp"
+
+            />
+
+        <EditText
+             android:id="@+id/edtpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:drawableLeft="@drawable/ic_lock_24dp"
+            android:ems="10"
+            android:hint=" Password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/_15sdp" />
+        <TextView
+
+            android:id="@+id/tvError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:singleLine="true"
+            android:textColor="#ff0000" />
+
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/round_edittext"
+            android:backgroundTint="@color/loginBTn"
+            android:clickable="true"
+            android:singleLine="true"
+            android:text="Login"
+            android:textColor="#fff"
+            android:textSize="@dimen/_18sdp"
+
+
+            />
+
+        <TextView
+
+            android:id="@+id/tvForgetPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:singleLine="true"
+            android:text="FORGOT PASSWORD ?"
+            android:textColor="@color/forgetPass" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

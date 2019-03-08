@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.driver.driverbooking.Activity.ContactUsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/forgetPass"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="CONTACT US"
+            android:textColor="#ffff"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="customer care number " />
+
+            <TextView
+                android:id="@+id/contactUS_No"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="+9181401318143" />
+
+            <View
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/line" />
+
+
+            <TextView
+
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="Email Id" />
+
+
+            <TextView
+                android:id="@+id/tvEmail"
+android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="meet2teju@gmail.com" />
+            <View
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/contactUS_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:textSize="@dimen/_15sdp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+

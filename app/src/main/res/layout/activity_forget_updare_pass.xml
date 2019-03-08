@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.driver.driverbooking.Activity.Forget_Password.ForgetUpdarePassActivity">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginLeft="@dimen/_25sdp"
+
+    android:layout_marginRight="@dimen/_25sdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/forgotPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_lock_24dp"
+        android:hint=" New Password"
+        android:inputType="textPassword"
+         android:singleLine="true"
+        android:textSize="@dimen/_15sdp"
+
+        />
+
+    <EditText
+
+        android:id="@+id/forgotPassConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_lock_24dp"
+        android:hint="Confirm Password "
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textSize="@dimen/_15sdp"
+
+        />
+    <Button
+        android:id="@+id/btnForgotPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/round_edittext"
+        android:backgroundTint="@color/loginBTn"
+        android:clickable="true"
+        android:singleLine="true"
+        android:text="Save"
+
+        android:textColor="#fff"
+        android:textSize="@dimen/_15sdp"
+
+
+        />
+</LinearLayout>
+
+</LinearLayout>

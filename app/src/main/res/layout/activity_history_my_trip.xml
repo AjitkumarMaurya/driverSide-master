@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.driver.driverbooking.Activity.HistoryMyTripActivity">
+
+
+
+        <fragment
+            android:id="@+id/map_22"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+        </fragment>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:id="@+id/tvGreenText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/ic_green_24dp"
+                        android:text="" />
+
+
+                    <TextView
+
+                        android:id="@+id/tvradeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvGreenText"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/ic_red_24dp"
+                        android:text="" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:id="@+id/onetrip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@drawable/ic_car_black_24dp" />
+
+                        <!--                    android:background="@drawable/ic_flat_one_24dp"-->
+
+
+                        <ImageView
+                            android:id="@+id/roundtrip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@drawable/ic_rotate_24dp"
+                            android:text="one -Way"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvTripType"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/onetrip"
+                            android:layout_alignParentRight="true"
+                            android:textSize="@dimen/_12sdp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTrip_Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_car_black_24dp"
+
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTrip_Date"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_access_time24dp"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <!-- <ImageButton
+                         android:src="@drawable/ic_location24dp"
+                         android:id="@+id/btn_img_toDayBookin"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" />
+        -->
+
+
+                    <TextView
+                        android:id="@+id/tvDistonsh_Km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/ic_car_black_24dp"
+                        android:text="" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+
+                    android:drawableLeft="@drawable/rupee24"
+                    android:textSize="@dimen/_13sdp" />
+            </RelativeLayout>
+            <!--
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgDriver"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:src="@drawable/logo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_marginStart="60dp"
+                            android:layout_marginLeft="60dp"
+                            android:text="Your Driver with Lorem lpsum" />
+
+                        <RatingBar
+                            android:id="@+id/retingBar"
+                            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:rating="4"
+                            android:stepSize="5" />
+                    </RelativeLayout>-->
+
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_user_24dp" />
+
+            <RatingBar
+                android:id="@+id/retingBar"
+
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp" />
+
+            <TextView
+                android:id="@+id/tvreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--  <fragment
+          android:id="@+id/mapNearBy"
+
+          android:name="com.google.android.gms.maps.MapFragment"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1">
+
+
+      </fragment>--><!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:id="@+id/tvGreenText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/ic_green_24dp"
+                        android:text="" />
+
+
+                    <TextView
+
+                        android:id="@+id/tvradeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvGreenText"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/ic_red_24dp"
+                        android:text="" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:id="@+id/onetrip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@drawable/ic_flat_one_24dp"
+                             android:text="one -Way" />
+
+                        &lt;!&ndash;                    android:background="@drawable/ic_flat_one_24dp"&ndash;&gt;
+
+
+                        <ImageView
+                            android:id="@+id/roundtrip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+
+                            android:background="@drawable/ic_rotate_24dp"
+                            android:text="one -Way" />
+
+                        <TextView
+                            android:id="@+id/tvTripType"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/onetrip"
+                            android:layout_alignParentRight="true"
+                            android:text="one -Way"
+                            android:textSize="@dimen/_12sdp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTrip_Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_car_black_24dp"
+
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTrip_Date"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_access_time24dp"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    &lt;!&ndash; <ImageButton
+                         android:src="@drawable/ic_location24dp"
+                         android:id="@+id/btn_img_toDayBookin"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" />
+        &ndash;&gt;
+
+
+                    <TextView
+                        android:id="@+id/tvDistonsh_Km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/ic_car_black_24dp"
+                        android:text="" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+
+                    android:drawableLeft="@drawable/rupee24"
+                    android:textSize="@dimen/_13sdp" />
+            </RelativeLayout>
+            &lt;!&ndash;
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgDriver"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:src="@drawable/logo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_marginStart="60dp"
+                            android:layout_marginLeft="60dp"
+                            android:text="Your Driver with Lorem lpsum" />
+
+                        <RatingBar
+                            android:id="@+id/retingBar"
+                            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:rating="4"
+                            android:stepSize="5" />
+                    </RelativeLayout>&ndash;&gt;
+
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_user_24dp"
+                android:text=" Bhavesh Vagani" />
+
+            <RatingBar
+                android:id="@+id/retingBar"
+
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp" />
+
+            <TextView
+                android:id="@+id/tvreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp" />
+
+        </LinearLayout>-->
+

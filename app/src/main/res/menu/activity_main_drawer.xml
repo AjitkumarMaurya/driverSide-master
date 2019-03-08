@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/nav_Cureewnt_booking"
+            android:icon="@drawable/current_booking"
+            android:iconTint="#e22b0c"
+            android:title="Current Booking  " />
+        <item
+            android:id="@+id/nav_Future_Bookings"
+            android:icon="@drawable/future_booking"
+            android:title="Future Booking " />
+        <item
+
+            android:id="@+id/nav_My_Trips"
+
+            android:icon="@drawable/my_trip"
+            android:title="My Trips"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/nav_My_Profile"
+            android:icon="@drawable/my_profile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_Documents"
+            android:icon="@drawable/documents"
+            android:title="Documents" />
+        <item
+            android:icon="@drawable/reset_password"
+            android:id="@+id/nav_ResetPassword"
+            android:title="Reset Password" />
+        <item
+            android:icon="@drawable/logout"
+            android:id="@+id/nav_Logout"
+            android:title="Logout" />
+
+
+    </group>
+
+
+</menu>
