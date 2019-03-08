@@ -30,8 +30,7 @@ import retrofit2.Response;
 
 public class PaymentInfoActivity extends AppCompatActivity {
 
-    String tripId;
-    int amount;
+
     PreferenceManager preferenceManager;
     Button btn_pay;
 
@@ -84,8 +83,57 @@ public class PaymentInfoActivity extends AppCompatActivity {
         paymentInfoResponce  = Common.paymentInfoResponce;
 
 
-
         intCode();
+
+
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void intCode() {
+
+
+
+
+        tv_date_time.setText(""+paymentInfoResponce.getRequestPayment().getStartTripDate());
+        tv_trip_no.setText(""+paymentInfoResponce.getRequestPayment().getTripUniqueId());
+
+        tv_amount_trip.setText(""+paymentInfoResponce.getRequestPayment().getTripAmount());
+        trip_hours.setText(""+paymentInfoResponce.getRequestPayment().getTripHours());
+        tv_start_trip_time.setText(""+paymentInfoResponce.getRequestPayment().getStartTripTime());
+        tv_start_trip_add.setText(""+paymentInfoResponce.getRequestPayment().getTripStartPointAddress());
+        tv_end_trip_time.setText(""+paymentInfoResponce.getRequestPayment().getEndTripTime());
+        tv_end_trip_add.setText(""+paymentInfoResponce.getRequestPayment().getTripDropPointAddress());
+        tv_trip_amount_2.setText(""+paymentInfoResponce.getRequestPayment().getTripAmount());
+        tv_trip_amount_gst.setText(""+paymentInfoResponce.getRequestPayment().getGstCharge());
+        tv_trip_amount_cgst.setText(""+paymentInfoResponce.getRequestPayment().getCgstCharge());
+        tv_trip_amount_accomodation.setText(""+paymentInfoResponce.getRequestPayment().getTripAccommodationCharges());
+        tv_trip_amount_food.setText(""+paymentInfoResponce.getRequestPayment().getTripFoodCharges());
+
+
+
+
+        if (paymentInfoResponce.getRequestPayment().getTripAmount().toString().equalsIgnoreCase("1"))
+        {
+            tv_pay_type.setText("Cash");
+
+        }else {
+            tv_pay_type.setText("Online");
+
+        }
+
+        tv_pay_type.setText(""+paymentInfoResponce.getRequestPayment().getTripAmount());
+
+
+        tv_trip_amount_grand.setText(""+paymentInfoResponce.getRequestPayment().getTripAmount());
+
+
 
         btn_pay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,53 +202,6 @@ public class PaymentInfoActivity extends AppCompatActivity {
 
             }
         });
-
-        iv_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
-    }
-
-    @SuppressLint("SetTextI18n")
-    private void intCode() {
-
-
-
-
-        tv_date_time.setText(""+paymentInfoResponce.getRequestPayment().getStartTripDate());
-        tv_trip_no.setText(""+paymentInfoResponce.getRequestPayment().getTripUniqueId());
-
-        tv_amount_trip.setText(""+paymentInfoResponce.getRequestPayment().getTripAmount());
-        trip_hours.setText(""+paymentInfoResponce.getRequestPayment().getTripHours());
-        tv_start_trip_time.setText(""+paymentInfoResponce.getRequestPayment().getStartTripTime());
-        tv_start_trip_add.setText(""+paymentInfoResponce.getRequestPayment().getTripStartPointAddress());
-        tv_end_trip_time.setText(""+paymentInfoResponce.getRequestPayment().getEndTripTime());
-        tv_end_trip_add.setText(""+paymentInfoResponce.getRequestPayment().getTripDropPointAddress());
-        tv_trip_amount_2.setText(""+paymentInfoResponce.getRequestPayment().getTripAmount());
-        tv_trip_amount_gst.setText(""+paymentInfoResponce.getRequestPayment().getGstCharge());
-        tv_trip_amount_cgst.setText(""+paymentInfoResponce.getRequestPayment().getCgstCharge());
-        tv_trip_amount_accomodation.setText(""+paymentInfoResponce.getRequestPayment().getTripAccommodationCharges());
-        tv_trip_amount_food.setText(""+paymentInfoResponce.getRequestPayment().getTripFoodCharges());
-
-
-
-
-        if (paymentInfoResponce.getRequestPayment().getTripAmount().toString().equalsIgnoreCase("1"))
-        {
-            tv_pay_type.setText("Cash");
-
-        }else {
-            tv_pay_type.setText("Online");
-
-        }
-
-        tv_pay_type.setText(""+paymentInfoResponce.getRequestPayment().getTripAmount());
-
-
-        tv_trip_amount_grand.setText(""+paymentInfoResponce.getRequestPayment().getTripAmount());
 
 
 
