@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 import com.driver.driverbooking.response.DriverTermsConditionResponse;
 import com.driver.driverbooking.retrofit.ApiClient;
 import com.driver.driverbooking.retrofit.ApiInterface;

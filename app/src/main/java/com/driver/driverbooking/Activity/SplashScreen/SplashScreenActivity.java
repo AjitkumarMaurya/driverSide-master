@@ -12,7 +12,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 import com.driver.driverbooking.Activity.LoginDiverActivity;
 import com.driver.driverbooking.MainActivity;
 import com.driver.driverbooking.utility.PreferenceManager;

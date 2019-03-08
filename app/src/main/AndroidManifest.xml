@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.abc.driverbooking">
-
+    package="com.driver.driverbooking">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="in.wptrafficanalyzer.locationroutedirectionmapv2.permission.MAPS_RECEIVE" />
@@ -11,10 +10,7 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-
-
     <application
-
         android:allowBackup="true"
         android:icon="@drawable/driver_app_icon"
         android:label="@string/app_name"
@@ -24,78 +20,73 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".Activity.PaymentInfoActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
+            android:name=".Activity.HelpActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.HelpActivity"
             android:label="Privacy Policy"
-            android:parentActivityName="com.driver.driverbooking.MapActivity.MapsActivity" />
+            android:parentActivityName=".MapActivity.MapsActivity"
+            android:screenOrientation="portrait" />
         <activity
+            android:name=".MainActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-
-
-        </activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".MapActivity.MapsActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.MapActivity.MapsActivity"
             android:label="@string/title_activity_maps"
-
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.LoginDiverActivity"
             android:icon="@drawable/driver_app_icon"
             android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.LoginDiverActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
+            android:name=".Activity.ProfileActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.ProfileActivity"
             android:label="My Profile "
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.MyTripsActivity"
             android:icon="@drawable/driver_app_icon"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.MyTripsActivity"
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.Future_BookingsActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.Future_BookingsActivity"
             android:label="Future Booking"
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.EditProfileActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.EditProfileActivity"
-            android:parentActivityName="com.driver.driverbooking.MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity
+            android:name=".Activity.DocumentsActivity"
             android:icon="@drawable/driver_app_icon"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.DocumentsActivity"
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.SplashScreen.SplashScreenActivity"
+            android:icon="@drawable/driver_app_icon"
             android:noHistory="true"
-            android:icon="@drawable/driver_app_icon"
             android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.SplashScreen.SplashScreenActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -104,60 +95,60 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Activity.Forget_Password.ForgetMobilenoActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.Forget_Password.ForgetMobilenoActivity"
             android:label="Forgot Password"
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.Forget_Password.ForgetOtpActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.Forget_Password.ForgetOtpActivity"
             android:label="Forgot Password"
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.Forget_Password.ForgetUpdarePassActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.Forget_Password.ForgetUpdarePassActivity"
             android:label="Forgot Password"
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.ContactUsActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.ContactUsActivity"
             android:label="Contact Us"
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.AboutAsActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.AboutAsActivity"
             android:label="About As"
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.ResetPasswordActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.ResetPasswordActivity"
             android:label="Reset Password"
-            android:parentActivityName="com.driver.driverbooking.MainActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".Activity.HistoryMyTripActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.HistoryMyTripActivity" />
+            android:screenOrientation="portrait" />
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
         <activity
+            android:name=".Activity.DriverTermsConditionActivity"
             android:icon="@drawable/driver_app_icon"
-            android:screenOrientation="portrait"
-            android:name="com.driver.driverbooking.Activity.DriverTermsConditionActivity"/>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

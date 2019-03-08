@@ -110,7 +110,6 @@ public interface ApiInterface {
                                           @Query("trip_drop_point_lat") String lat,
                                           @Query("trip_drop_point_lang") String lang);
 
-
     @GET("driver/completeTrip")
     Call<CompleteTripResponce> getCompleteTrip(@Query("tripId") Integer TripId);
 

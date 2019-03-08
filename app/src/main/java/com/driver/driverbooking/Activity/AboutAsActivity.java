@@ -8,7 +8,7 @@ import com.driver.driverbooking.response.AboutsAsResponse;
 import com.driver.driverbooking.retrofit.ApiClient;
 import com.driver.driverbooking.retrofit.ApiInterface;
 
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;

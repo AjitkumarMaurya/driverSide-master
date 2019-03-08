@@ -1,5 +1,7 @@
 package com.driver.driverbooking;
 
+import com.driver.driverbooking.response.PaymentInfoResponce;
+
 public class Common {
     public static Double myfirstLat = 0.0d;
     public static Double myfirstLog = 0.0d;
@@ -36,6 +38,7 @@ public class Common {
     public static String review = "";
     public static String UsageTime = "";
 
+    public static PaymentInfoResponce paymentInfoResponce= null;
 
     public static Double myfirstLat2 = 0.0d;
     public static Double myfirstLog2 = 0.0d;

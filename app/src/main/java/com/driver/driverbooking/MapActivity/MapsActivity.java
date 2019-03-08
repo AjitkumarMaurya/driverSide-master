@@ -23,9 +23,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.driver.driverbooking.Activity.ContactUsActivity;
+import com.driver.driverbooking.Activity.PaymentInfoActivity;
 import com.driver.driverbooking.Common;
 import com.driver.driverbooking.MainActivity;
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 import com.driver.driverbooking.directionhelpers.FetchURL;
 import com.driver.driverbooking.directionhelpers.TaskLoadedCallback;
 import com.driver.driverbooking.response.PaymentInfoResponce;
@@ -210,9 +211,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 call.enqueue(new Callback<RequestCompleteTripOTPResponce>() {
                     @Override
                     public void onResponse(Call<RequestCompleteTripOTPResponce> call, Response<RequestCompleteTripOTPResponce> response) {
-                        if (response == null && response.isSuccessful()) {
+                        if (response != null && response.isSuccessful()) {
 
                             numberOtp = response.body().getRequestStartTripOTP();
+                            Log.e("@@","OTP---"+ response.body().getRequestStartTripOTP());
 
                         }
 
@@ -230,6 +232,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     public void onClick(View v) {
                         otpsend = otpView.getText().toString();
                         //  int inum = Integer.parseInt(otpsend);
+                        Log.e("@@","OTP enterd---"+otpsend);
+
                         if (otpsend.isEmpty()) {
                             //    Toast.makeText(MapsActivity.this, "Enter otp.. ", Toast.LENGTH_SHORT).show();
                             otpView.setError("Enter Otp ");
@@ -237,6 +241,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         } else if (numberOtp == Integer.parseInt(otpsend)) {
                             Toast.makeText(MapsActivity.this, "Otp varified...", Toast.LENGTH_SHORT).show();
                             RequestPaymentApiCall();
+                            dialog.dismiss();
+
                         } else {
                             Toast.makeText(MapsActivity.this, "Wrong Otp entered.", Toast.LENGTH_SHORT).show();
                         }
@@ -253,6 +259,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 });
                 alert_start_otp.setView(view);
                 dialog = alert_start_otp.create();
+                dialog.setCancelable(false);
                 dialog.show();
 
 
@@ -279,9 +286,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 call.enqueue(new Callback<RequestStartTripOTPResponse>() {
                     @Override
                     public void onResponse(Call<RequestStartTripOTPResponse> call, Response<RequestStartTripOTPResponse> response) {
-                        if (response == null && response.isSuccessful()) {
+                        if (response != null && response.isSuccessful()) {
 
                             numberOtp = response.body().getRequestStartTripOTP();
+
+                            Log.e("@@","OTP---"+ response.body().getRequestStartTripOTP());
 
                         }
 
@@ -298,6 +307,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     @Override
                     public void onClick(View v) {
                         otpsend = otpView.getText().toString();
+                        Log.e("@@","OTP enterd---"+otpsend);
+
                         //  int inum = Integer.parseInt(otpsend);
                         if (otpsend.isEmpty()) {
                             //    Toast.makeText(MapsActivity.this, "Enter otp.. ", Toast.LENGTH_SHORT).show();
@@ -305,6 +316,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             //   | PASS numberOtp
                         } else if (numberOtp == Integer.parseInt(otpsend)) {
                             Toast.makeText(MapsActivity.this, "Otp varified...", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
                             StartTripApiCall();
                         } else {
                             Toast.makeText(MapsActivity.this, "Wrong Otp entered.", Toast.LENGTH_SHORT).show();
@@ -322,6 +334,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 });
                 alert_start_otp.setView(view);
                 dialog = alert_start_otp.create();
+                dialog.setCancelable(false);
                 dialog.show();
 
 
@@ -576,12 +589,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onResponse(Call<PaymentInfoResponce> call, Response<PaymentInfoResponce> response) {
 
 
+                if (response != null && response.isSuccessful()){
+
+
+                    Common.paymentInfoResponce = response.body();
+
+                    startActivity(new Intent(MapsActivity.this, PaymentInfoActivity.class));
+
+
+
+                }
+
 
 
             }
 
             @Override
             public void onFailure(Call<PaymentInfoResponce> call, Throwable t) {
+
+                Toast.makeText(MapsActivity.this, "Faild to stop "+t.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });

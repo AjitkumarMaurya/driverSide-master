@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.driver.driverbooking.MainActivity;
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 import com.driver.driverbooking.response.ChengePasswordRespnse;
 import com.driver.driverbooking.retrofit.ApiClient;
 import com.driver.driverbooking.retrofit.ApiInterface;

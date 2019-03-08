@@ -31,8 +31,9 @@ import com.driver.driverbooking.Activity.Future_BookingsActivity;
 import com.driver.driverbooking.Activity.MyTripsActivity;
 import com.driver.driverbooking.Activity.ProfileActivity;
 import com.driver.driverbooking.Activity.ResetPasswordActivity;
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 import com.driver.driverbooking.adepter.DashboardAdepter;
+import com.driver.driverbooking.adepter.OnGoingTripAdapter;
 import com.driver.driverbooking.model.TripsModel;
 import com.driver.driverbooking.response.TripsResponse;
 import com.driver.driverbooking.retrofit.ApiClient;
@@ -40,6 +41,7 @@ import com.driver.driverbooking.retrofit.ApiInterface;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -52,11 +54,11 @@ public class MainActivity extends AppCompatActivity
     RecyclerView recyclerViewOn;
     ApiInterface apiInterface;
     DashboardAdepter dashboardAdepter;
-    DashboardAdepter dashboardAdepterOn;
+    OnGoingTripAdapter dashboardAdepterOn;
 
     SwipeRefreshLayout swipe;
     ArrayList<TripsModel> tripsModelsarray = new ArrayList<>();
-    ArrayList<TripsResponse.OngoingTrip> tripOn = new ArrayList<>();
+    List<TripsResponse.OngoingTrip> tripOn = new ArrayList<>();
 
     TextView firestName, lastName;
 
@@ -186,42 +188,23 @@ public class MainActivity extends AppCompatActivity
 
 
                     tripsModelsarray = response.body().getTripsModels();
+                    tripOn = response.body().getOngoingTrips();
 
+                    recyclerView.setNestedScrollingEnabled(false);
+                    recyclerViewOn.setNestedScrollingEnabled(false);
 
-                    recyclerView = (RecyclerView) findViewById(R.id.dashboradRecyclerview);
-                    recyclerViewOn = (RecyclerView) findViewById(R.id.dashboradRecyclerview);
-
-
-                    dashboardAdepter = new DashboardAdepter(MainActivity.this, tripsModelsarray,tripOn,false);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayout.VERTICAL, false));
-                    recyclerView.setHasFixedSize(true);
-                    recyclerView.setItemAnimator(new DefaultItemAnimator());
-                    recyclerView.setAdapter(dashboardAdepter);
-
-
-                    dashboardAdepterOn = new DashboardAdepter(MainActivity.this, tripsModelsarray,tripOn,true);
+                   dashboardAdepterOn = new OnGoingTripAdapter(MainActivity.this,tripOn);
                     recyclerViewOn.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayout.VERTICAL, false));
                     recyclerViewOn.setHasFixedSize(true);
                     recyclerViewOn.setItemAnimator(new DefaultItemAnimator());
                     recyclerViewOn.setAdapter(dashboardAdepterOn);
 
+                    dashboardAdepter = new DashboardAdepter(MainActivity.this, tripsModelsarray);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayout.VERTICAL, false));
+                    recyclerView.setHasFixedSize(true);
+                    recyclerView.setItemAnimator(new DefaultItemAnimator());
+                    recyclerView.setAdapter(dashboardAdepter);
 
-                    dashboardAdepter.setOnItemClickListener(new DashboardAdepter.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(View view, int position) {
-                           // tripsModel = dashboardAdepter.getItem(position);
-                            //    Toast.makeText(MainActivity.this, first1, Toast.LENGTH_SHORT).show();
-
-                            fisrt = tripsModel.getTripAstPickupPointLat();
-                            last = tripsModel.getTripAstPickupPointLang();
-                            palesh = tripsModel.getTripAstPickupPointName();
-                            first1 = tripsModel.getTripAstDropPointLat();
-                            last1 = tripsModel.getTripAstDropPointLang();
-                            palesh1 = tripsModel.getTripAstDropPointName();
-
-
-                        }
-                    });
 
                 }
             }

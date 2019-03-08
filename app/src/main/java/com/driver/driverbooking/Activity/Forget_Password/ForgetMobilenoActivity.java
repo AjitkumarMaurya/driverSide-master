@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 import com.driver.driverbooking.response.ForgotPassNumberResponse;
 import com.driver.driverbooking.retrofit.ApiClient;
 import com.driver.driverbooking.retrofit.ApiInterface;

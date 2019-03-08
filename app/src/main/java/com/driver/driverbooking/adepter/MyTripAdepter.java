@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.driver.driverbooking.Activity.HistoryMyTripActivity;
 import com.driver.driverbooking.Common;
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 import com.driver.driverbooking.model.TripDetailsModel;
 
 import java.util.ArrayList;

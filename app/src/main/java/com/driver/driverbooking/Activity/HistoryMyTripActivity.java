@@ -11,7 +11,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.driver.driverbooking.Common;
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 import com.driver.driverbooking.retrofit.ApiInterface;
 import com.driver.driverbooking.utility.FetchURL;
 import com.google.android.gms.maps.CameraUpdateFactory;

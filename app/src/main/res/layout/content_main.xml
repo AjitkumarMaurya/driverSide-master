@@ -44,11 +44,11 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-          <!--  <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_profile_round" />
--->
+            <!--  <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@mipmap/ic_profile_round" />
+  -->
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
 
 
@@ -56,8 +56,6 @@
                 android:layout_width="@dimen/_80sdp"
                 android:layout_height="@dimen/_60sdp"
                 app:civ_border_color="#ffffff" />
-
-
 
 
             <LinearLayout
@@ -70,21 +68,21 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:text=""
-                    android:textStyle="bold"
+                    android:textColor="@color/forgetPass"
                     android:textSize="@dimen/_13sdp"
-                    android:textColor="@color/forgetPass" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvNameTodaylast"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_3sdp"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_13sdp"
-
                     android:layout_marginTop="@dimen/_5sdp"
                     android:text="  "
-                    android:textColor="@color/forgetPass" />
+
+                    android:textColor="@color/forgetPass"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
@@ -116,19 +114,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:text=""
-                    android:textStyle="bold"
-
                     android:textColor="@color/forgetPass"
-                    android:textSize="@dimen/_18sdp" />
+
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Your Booking"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_13sdp"
-                    android:textStyle="bold"
 
-                    android:textColor="@color/black" />
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
@@ -151,17 +149,17 @@
                 android:id="@+id/tvDateYourbooking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_13sdp"
 
-                android:textColor="@color/black" />
+                android:textStyle="bold" />
 
-         <!--   <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_gravity="center_horizontal"
+            <!--   <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:layout_gravity="center_horizontal"
 
-                android:background="@color/line" />-->
+                   android:background="@color/line" />-->
 
         </LinearLayout>
 
@@ -174,40 +172,55 @@
         android:layout_height="@dimen/_2sdp"
 
         android:background="@color/line" />
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/dashboradOnRecyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
 
-<android.support.v4.widget.SwipeRefreshLayout
-    android:id="@+id/swipe"
-    android:elevation="2dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/dashboradRecyclerview"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</android.support.v4.widget.SwipeRefreshLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:elevation="2dp">
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-    android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_alignParentBottom="true"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" />
-</RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dashboradRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="?android:attr/windowBackground"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/navigation" />
+    </RelativeLayout>
 
 
 </LinearLayout>

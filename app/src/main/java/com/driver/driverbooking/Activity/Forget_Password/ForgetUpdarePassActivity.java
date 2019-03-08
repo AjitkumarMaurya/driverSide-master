@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.driver.driverbooking.Activity.LoginDiverActivity;
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 import com.driver.driverbooking.response.ForgetPassResponse;
 import com.driver.driverbooking.retrofit.ApiClient;
 import com.driver.driverbooking.retrofit.ApiInterface;

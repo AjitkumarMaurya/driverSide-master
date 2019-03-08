@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.abc.driverbooking.R;
+import com.driver.driverbooking.R;
 import com.driver.driverbooking.adepter.MyTripAdepter;
 import com.driver.driverbooking.model.TripDetailsModel;
 import com.driver.driverbooking.response.MyTripsResponse;
