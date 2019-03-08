@@ -571,7 +571,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         int mHour = c.get(Calendar.HOUR_OF_DAY);
         int mMinute = c.get(Calendar.MINUTE);
         @SuppressLint("DefaultLocale") String cuurentTime= String.format("%02d:%02d", mHour, mMinute);
-        String currentDate = mYear + "-" + checkDigit(mMonth) + "-" +checkDigit(mDay+1);
+        String currentDate = mYear + "-" + checkDigit(mMonth+1) + "-" +checkDigit(mDay);
 
         getAddress(MapsActivity.this,locationcurrent.getLatitude(),locationcurrent.getLongitude());
 
