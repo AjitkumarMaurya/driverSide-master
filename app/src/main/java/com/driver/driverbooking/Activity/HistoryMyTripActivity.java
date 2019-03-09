@@ -38,7 +38,7 @@ public class HistoryMyTripActivity extends AppCompatActivity implements OnMapRea
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_my_trip);
-        setTitle("History");
+        setTitle("My Trip");
 /*
         curuntlocation=findViewById(R.id.tvGreenText);
         droplocation=findViewById(R.id.tvradeText);*/

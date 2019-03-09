@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/driver_login_bg"
-    android:orientation="vertical"
-    tools:context=".Fragment_Driver.LoginDrivarFragment">
+    android:orientation="vertical">
 
 
     <LinearLayout
@@ -18,9 +17,9 @@
 
         <ImageView
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/driver_login_icon" />
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/driver_app_icon" />
     </LinearLayout>
 
     <LinearLayout

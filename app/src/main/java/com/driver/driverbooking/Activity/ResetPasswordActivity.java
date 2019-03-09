@@ -100,6 +100,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                                 Log.d("test", "onResponse: " + response.body().getUpdatePassword());
                                 startActivity(new Intent(ResetPasswordActivity.this, MainActivity.class
                                 ));
+                                finish();
                             }
                         }
                     }

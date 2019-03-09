@@ -28,6 +28,7 @@ import com.driver.driverbooking.Activity.ContactUsActivity;
 import com.driver.driverbooking.Activity.DocumentsActivity;
 import com.driver.driverbooking.Activity.DriverTermsConditionActivity;
 import com.driver.driverbooking.Activity.Future_BookingsActivity;
+import com.driver.driverbooking.Activity.LoginDiverActivity;
 import com.driver.driverbooking.Activity.MyTripsActivity;
 import com.driver.driverbooking.Activity.ProfileActivity;
 import com.driver.driverbooking.Activity.ResetPasswordActivity;
@@ -38,6 +39,7 @@ import com.driver.driverbooking.model.TripsModel;
 import com.driver.driverbooking.response.TripsResponse;
 import com.driver.driverbooking.retrofit.ApiClient;
 import com.driver.driverbooking.retrofit.ApiInterface;
+import com.driver.driverbooking.utility.PreferenceManager;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity
     ApiInterface apiInterface;
     DashboardAdepter dashboardAdepter;
     OnGoingTripAdapter dashboardAdepterOn;
+    PreferenceManager preferenceManager;
 
     SwipeRefreshLayout swipe;
     ArrayList<TripsModel> tripsModelsarray = new ArrayList<>();
@@ -72,6 +75,7 @@ public class MainActivity extends AppCompatActivity
     int restoredText;
     String myid;
 
+    LinearLayout lin_text,lin_recy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +83,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        preferenceManager = new PreferenceManager(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -101,7 +107,8 @@ public class MainActivity extends AppCompatActivity
 
         firestName = (TextView) headerfname.findViewById(R.id.firstNameheder);
         lastName = (TextView) headerlname.findViewById(R.id.lastNameheder);
-
+        lin_text = findViewById(R.id.lin_text);
+        lin_recy = findViewById(R.id.lin_recy);
 
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -190,20 +197,38 @@ public class MainActivity extends AppCompatActivity
                     tripsModelsarray = response.body().getTripsModels();
                     tripOn = response.body().getOngoingTrips();
 
+
                     recyclerView.setNestedScrollingEnabled(false);
                     recyclerViewOn.setNestedScrollingEnabled(false);
 
-                   dashboardAdepterOn = new OnGoingTripAdapter(MainActivity.this,tripOn);
-                    recyclerViewOn.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayout.VERTICAL, false));
-                    recyclerViewOn.setHasFixedSize(true);
-                    recyclerViewOn.setItemAnimator(new DefaultItemAnimator());
-                    recyclerViewOn.setAdapter(dashboardAdepterOn);
 
-                    dashboardAdepter = new DashboardAdepter(MainActivity.this, tripsModelsarray);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayout.VERTICAL, false));
-                    recyclerView.setHasFixedSize(true);
-                    recyclerView.setItemAnimator(new DefaultItemAnimator());
-                    recyclerView.setAdapter(dashboardAdepter);
+                    try {
+                        if (tripOn.size()>0){
+
+                            tvTodaybooking.setText(tripOn.size() + "");
+
+                            recyclerViewOn.setVisibility(View.VISIBLE);
+                            dashboardAdepterOn = new OnGoingTripAdapter(MainActivity.this,tripOn);
+                            recyclerViewOn.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayout.VERTICAL, false));
+                            recyclerViewOn.setHasFixedSize(true);
+                            recyclerViewOn.setItemAnimator(new DefaultItemAnimator());
+                            recyclerViewOn.setAdapter(dashboardAdepterOn);
+
+                        }else {
+                            recyclerViewOn.setVisibility(View.GONE);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        recyclerViewOn.setVisibility(View.GONE);
+
+                    }
+
+
+                            dashboardAdepter = new DashboardAdepter(MainActivity.this, tripsModelsarray);
+                            recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayout.VERTICAL, false));
+                            recyclerView.setHasFixedSize(true);
+                            recyclerView.setItemAnimator(new DefaultItemAnimator());
+                            recyclerView.setAdapter(dashboardAdepter);
 
 
                 }
@@ -299,10 +324,13 @@ public class MainActivity extends AppCompatActivity
             SharedPreferences.Editor editor = preferences.edit();
             editor.clear();
             editor.commit();
+
+            preferenceManager.clearPreferences();
+
+            startActivity(new Intent(MainActivity.this, LoginDiverActivity.class));
+
             finish();
 
-
-            //startActivity(new Intent(MainActivity.this, LoginDiverActivity.class));
         }
 
 

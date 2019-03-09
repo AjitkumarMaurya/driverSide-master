@@ -111,20 +111,19 @@ public class OnGoingTripAdapter extends RecyclerView.Adapter<OnGoingTripAdapter.
                         Common.startTime = time;
                         Common.myTripType = mytriptype;
                         Common.statusId =trips2.get(i).getTripStatusId()+"";
-
                         Common.UsageTime = tvUsageTime;
-
                         Intent intent = new Intent(context, MapsActivity.class);
-
                         intent.putExtra("id", Id);
-
                         context.startActivity(intent);
 
                     } else {
 
                         Common.myfirstLat = Double.parseDouble(fisrt);
                         Common.myfirstLog = Double.parseDouble(last);
+                        Common.mylasttLat = Double.parseDouble(first1);
+                        Common.mylastlog = Double.parseDouble(last1);
                         Common.startTitle = palesh;
+                        Common.lastTitle = palesh1;
                         Common.userNameinTrip = name;
                         Common.userMobileNumInTrip = mobileNum;
                         Common.userAddressinTrip = address;
@@ -133,10 +132,8 @@ public class OnGoingTripAdapter extends RecyclerView.Adapter<OnGoingTripAdapter.
                         Common.myTripType = mytriptype;
                         Common.UsageTime = tvUsageTime;
                         Common.statusId =trips2.get(i).getTripStatusId()+"";
-
                         Intent intent = new Intent(context, MapsActivity.class);
                         intent.putExtra("id", Id);
-
                         context.startActivity(intent);
 
 

@@ -80,7 +80,7 @@ public interface ApiInterface {
 
 
     @GET("driver/myTrips")
-    Call<MyTripsResponse> getMytrip(@Query("driverId") Integer driverId);
+    Call<MyTripsResponse> getMytrip(@Query("driverId") String driverId);
 
     @GET("driver/arrivedPickupPoint")
     Call<ReachedPickupPointResponse> getReachedPickupPoint(@Query("tripId") String TripId,

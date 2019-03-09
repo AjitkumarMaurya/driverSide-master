@@ -16,7 +16,6 @@ import com.driver.driverbooking.Common;
 import com.driver.driverbooking.MapActivity.MapsActivity;
 import com.driver.driverbooking.R;
 import com.driver.driverbooking.model.TripsModel;
-import com.driver.driverbooking.response.TripsResponse;
 
 import java.util.ArrayList;
 
@@ -137,7 +136,10 @@ public class DashboardAdepter extends RecyclerView.Adapter<DashboardAdepter.View
 
                         Common.myfirstLat = Double.parseDouble(fisrt);
                         Common.myfirstLog = Double.parseDouble(last);
+                        Common.mylasttLat = Double.parseDouble(first1);
+                        Common.mylastlog = Double.parseDouble(last1);
                         Common.startTitle = palesh;
+                        Common.lastTitle = palesh1;
                         Common.userNameinTrip = name;
                         Common.userMobileNumInTrip = mobileNum;
                         Common.userAddressinTrip = address;
@@ -221,6 +223,7 @@ public class DashboardAdepter extends RecyclerView.Adapter<DashboardAdepter.View
                     if (mListener != null) mListener.onItemClick(v, getAdapterPosition());
                 }
             });
+
 
         }
     }
