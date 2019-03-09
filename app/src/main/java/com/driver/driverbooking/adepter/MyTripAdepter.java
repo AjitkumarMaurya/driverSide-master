@@ -1,5 +1,6 @@
 package com.driver.driverbooking.adepter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -44,87 +45,51 @@ public class MyTripAdepter extends RecyclerView.Adapter<MyTripAdepter.MyTripMode
         return new MyTripModel(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull final MyTripAdepter.MyTripModel myTripModel, final int i) {
 
-        final String curubtLocaton, dropLocation, curuntAddresh, dropAddresh, tripType, CompliteTripTime, date, time, payment, Km, userName, reting, review, TripType;
+        myTripModel.tvTripType.setText(tripDetailsList.get(i).getTripsType());
 
         if (tripDetailsList.get(i).getTripsType().equals("One Way Trip")) {
 
-            myTripModel.round.setVisibility(View.GONE);
-            myTripModel.onewey.setVisibility(View.VISIBLE);
+
         } else if (tripDetailsList.get(i).getTripsType().equals("Round Trip")) {
-            myTripModel.onewey.setVisibility(View.GONE);
-            myTripModel.round.setVisibility(View.VISIBLE);
+
+
         }
 
 
-        myTripModel.tvCityLocation.setText(tripDetailsList.get(i).getTripAstPickupPointCityName());
-        myTripModel.tvCityDropLocation.setText(tripDetailsList.get(i).getTripAstDropPointCityName());
-        myTripModel.tvGreenAddresh.setText(tripDetailsList.get(i).getTripAstPickupPointName());
-        myTripModel.tvRedAddreshh.setText(tripDetailsList.get(i).getTripAstDropPointName());
+        myTripModel.tv_drop_address.setText(""+tripDetailsList.get(i).getTripAstDropPointName());
+        myTripModel.tv_address_pick.setText(""+tripDetailsList.get(i).getTripPickupPointName());
+        myTripModel.tv_end_time.setText(""+tripDetailsList.get(i).getTripEndTime());
+        myTripModel.tv_start_time.setText(""+tripDetailsList.get(i).getTripStartTime());
 
-        myTripModel.tvTripType.setText(tripDetailsList.get(i).getTripsType());
-        myTripModel.tvTripTime.setText(tripDetailsList.get(i).getTripStartTime());
-        myTripModel.tvTime.setText(tripDetailsList.get(i).getTripEndTime());
-        myTripModel.tvDate.setText(tripDetailsList.get(i).getTripEndDate());
-        myTripModel.tvPayment.setText(tripDetailsList.get(i).getTripAmount());
+        myTripModel.tv_trip_hour.setText("TRIP HOUR:"+tripDetailsList.get(i).getTripUsage());
+        myTripModel.tv_trip_no.setText("TRIP NO:"+tripDetailsList.get(i).getTripUniqueId());
 
+        myTripModel.tvDate.setText(""+tripDetailsList.get(i).getTripEndDate());
+        myTripModel.tv_pay_type.setText(""+tripDetailsList.get(i).getTripPaymentType());
+       myTripModel.tvPayment.setText(""+tripDetailsList.get(i).getTripAmount());
 
-        //Click Lisner
-        curubtLocaton = tripDetailsList.get(i).getTripAstPickupPointCityName();
-        dropLocation = tripDetailsList.get(i).getTripAstDropPointCityName();
-        curuntAddresh = tripDetailsList.get(i).getTripAstPickupPointName();
-        dropAddresh = tripDetailsList.get(i).getTripAstDropPointName();
-        tripType = tripDetailsList.get(i).getTripsType();
-        CompliteTripTime = tripDetailsList.get(i).getTripStartTime();
+        if (tripDetailsList.get(i).getTripStatusId().equalsIgnoreCase("5")){
+            myTripModel.tv_trip_status.setVisibility(View.VISIBLE);
 
-        date = tripDetailsList.get(i).getTripEndDate();
-        time = tripDetailsList.get(i).getTripEndTime();
-        payment = tripDetailsList.get(i).getTripAmount();
-        Km = tripDetailsList.get(i).getTripKmsDriven();
-        reting = tripDetailsList.get(i).getUsersTripRating();
-        userName = tripDetailsList.get(i).getTripUserName();
-        review = tripDetailsList.get(i).getUsersTripNote();
+            myTripModel.tv_trip_status.setImageResource(R.drawable.completw_bg);
 
+        }else if (tripDetailsList.get(i).getTripStatusId().equalsIgnoreCase("6")){
+            myTripModel.tv_trip_status.setVisibility(View.VISIBLE);
 
-        /*userName=tripDetailsList.get(i).getname*/
-        myTripModel.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Common.curontL = curubtLocaton;
-                Common.dropL = dropLocation;
-                Common.curuntA = curuntAddresh;
-                Common.dropA = dropAddresh;
-                Common.tripTyp = tripType;
-                Common.CompliteTripTi = CompliteTripTime;
-                Common.time = time;
-                Common.date = date;
-                Common.payment = payment;
-                Common.km = Km;
-                Common.reting = reting;
-                Common.userName = userName;
+            myTripModel.tv_trip_status.setImageResource(R.drawable.cancel_bg);
 
-                try {
-                    Common.myfirstLat2 = Double.valueOf(tripDetailsList.get(i).getTripDropPointLat());
-                    Common.myfirstLog2 = Double.valueOf(tripDetailsList.get(i).getTripDropPointLang());
-                    Common.mylasttLat1 = Double.valueOf(tripDetailsList.get(i).getTripPickupPointLat());
-                    Common.mylastlog1 = Double.valueOf(tripDetailsList.get(i).getTripPickupPointLang());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        }else {
+            myTripModel.tv_trip_status.setVisibility(View.GONE);
 
-                Common.review = review;
+        }
 
 
-                Intent intent = new Intent(context, HistoryMyTripActivity.class);
 
 
-                context.startActivity(intent);
-
-
-            }
-        });
 
     }
 
@@ -145,24 +110,26 @@ public class MyTripAdepter extends RecyclerView.Adapter<MyTripAdepter.MyTripMode
 
     public class MyTripModel extends RecyclerView.ViewHolder {
         CardView cardView;
-        TextView tvCityLocation, tvCityDropLocation, tvGreenAddresh, tvRedAddreshh, tvTripType, tvTripTime, tvTime, tvDate, tvPayment;
-        ImageView onewey, round;
+        TextView tv_pay_type, tv_drop_address, tvDate, tv_address_pick,tv_end_time,tv_start_time,tvTripType,tv_trip_hour,
+                tv_trip_no,tvPayment;
+        ImageView tv_trip_status;
 
         public MyTripModel(@NonNull View itemView) {
             super(itemView);
-            tvCityLocation = itemView.findViewById(R.id.tvPleshGoing);
+            tv_pay_type = itemView.findViewById(R.id.tv_pay_type);
 
-            tvCityDropLocation = itemView.findViewById(R.id.tvPleshFrom);
-            tvGreenAddresh = itemView.findViewById(R.id.tvGreenText);
-            tvRedAddreshh = itemView.findViewById(R.id.tvradeText);
-            tvTripTime = itemView.findViewById(R.id.tvTimeText);
-            tvTime = itemView.findViewById(R.id.tvTime);
+            tv_drop_address = itemView.findViewById(R.id.tv_drop_address);
             tvDate = itemView.findViewById(R.id.tvDate);
-            tvPayment = itemView.findViewById(R.id.tvPayment);
+            tv_address_pick = itemView.findViewById(R.id.tv_address_pick);
+            tv_end_time = itemView.findViewById(R.id.tv_end_time);
+            tv_start_time = itemView.findViewById(R.id.tv_start_time);
+            tvDate = itemView.findViewById(R.id.tvDate);
+            tv_trip_status = itemView.findViewById(R.id.tv_trip_status);
             cardView = itemView.findViewById(R.id.cardViewMyTrip);
             tvTripType = itemView.findViewById(R.id.tvTripType);
-            onewey = itemView.findViewById(R.id.onewey);
-            round = itemView.findViewById(R.id.round);
+            tv_trip_hour = itemView.findViewById(R.id.tv_trip_hour);
+            tv_trip_no = itemView.findViewById(R.id.tv_trip_no);
+            tvPayment = itemView.findViewById(R.id.tvPayment);
 
 
             itemView.setOnClickListener(new View.OnClickListener() {

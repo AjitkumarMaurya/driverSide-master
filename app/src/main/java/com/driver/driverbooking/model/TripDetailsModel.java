@@ -122,10 +122,22 @@ public class TripDetailsModel {
     @Expose
     private String tripsType;
 
+    @SerializedName("trip_payment_type")
+    @Expose
+    private String tripPaymentType;
 
     @SerializedName("trip_user_name")
     @Expose
     private String tripUserName;
+
+
+    public String getTripPaymentType() {
+        return tripPaymentType;
+    }
+
+    public void setTripPaymentType(String tripPaymentType) {
+        this.tripPaymentType = tripPaymentType;
+    }
 
     public String getTripUserName() {
         return tripUserName;

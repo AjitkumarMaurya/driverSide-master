@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    public static final String BASE_URL = "https://oddeveninfotech.com/driverBooking/public/";
+    public static final String BASE_URL = "http://www.driveroncall.co.in/";
     private static Retrofit retrofit = null;
 
 

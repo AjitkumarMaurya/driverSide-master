@@ -105,10 +105,10 @@ public class PaymentInfoResponce {
         private Object tripPaymentStatus;
         @SerializedName("gst_charge")
         @Expose
-        private Integer gstCharge;
+        private Object gstCharge;
         @SerializedName("cgst_charge")
         @Expose
-        private Integer cgstCharge;
+        private Object cgstCharge;
         @SerializedName("trip_accommodation_charges")
         @Expose
         private Integer tripAccommodationCharges;
@@ -361,19 +361,19 @@ public class PaymentInfoResponce {
             this.tripPaymentStatus = tripPaymentStatus;
         }
 
-        public Integer getGstCharge() {
+        public Object getGstCharge() {
             return gstCharge;
         }
 
-        public void setGstCharge(Integer gstCharge) {
+        public void setGstCharge(Object gstCharge) {
             this.gstCharge = gstCharge;
         }
 
-        public Integer getCgstCharge() {
+        public Object getCgstCharge() {
             return cgstCharge;
         }
 
-        public void setCgstCharge(Integer cgstCharge) {
+        public void setCgstCharge(Object cgstCharge) {
             this.cgstCharge = cgstCharge;
         }
 
