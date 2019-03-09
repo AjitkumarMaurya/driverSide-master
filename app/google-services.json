@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "863905871494",
+    "firebase_url": "https://doc-operator.firebaseio.com",
+    "project_id": "doc-operator",
+    "storage_bucket": "doc-operator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863905871494:android:ff51149eb02e2601",
+        "android_client_info": {
+          "package_name": "com.driver.driverbooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863905871494-vodlvao52fordhp502qthkbh3fnhklqr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.driver.driverbooking",
+            "certificate_hash": "80ac706031bec4bd6db8c30524f12b0418d0a5fb"
+          }
+        },
+        {
+          "client_id": "863905871494-t97fhqdo1b6ng9lhs412s5j6frbsfjor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5Umxxr4xlAUKQXJwmFgCOjoWlFEXfas4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863905871494-t97fhqdo1b6ng9lhs412s5j6frbsfjor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
