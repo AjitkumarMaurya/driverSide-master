@@ -32,7 +32,7 @@ public class PaymentInfoActivity extends AppCompatActivity {
 
 
     PreferenceManager preferenceManager;
-    Button btn_pay;
+    Button btn_pay,btn_finish;
 
     Toolbar toolbar;
     ImageView iv_back;
@@ -59,6 +59,7 @@ public class PaymentInfoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         btn_pay = findViewById(R.id.btn_pay);
+        btn_finish  = findViewById(R.id.btn_finish);
 
         iv_back= findViewById(R.id.iv_back);
 
@@ -101,8 +102,8 @@ public class PaymentInfoActivity extends AppCompatActivity {
 
 
 
-        tv_date_time.setText(""+paymentInfoResponce.getRequestPayment().getStartTripDate());
-        tv_trip_no.setText(""+paymentInfoResponce.getRequestPayment().getTripUniqueId());
+        tv_date_time.setText("TRIP DATE:"+paymentInfoResponce.getRequestPayment().getStartTripDate());
+        tv_trip_no.setText("TRIP NO:"+paymentInfoResponce.getRequestPayment().getTripUniqueId());
 
         tv_amount_trip.setText(""+paymentInfoResponce.getRequestPayment().getTripAmount());
         trip_hours.setText(""+paymentInfoResponce.getRequestPayment().getTripHours());
@@ -133,6 +134,14 @@ public class PaymentInfoActivity extends AppCompatActivity {
 
         tv_trip_amount_grand.setText(""+paymentInfoResponce.getRequestPayment().getTripAmount());
 
+        btn_finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PaymentInfoActivity.this, MainActivity.class));
+                finish();
+
+            }
+        });
 
 
         btn_pay.setOnClickListener(new View.OnClickListener() {
